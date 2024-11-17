@@ -1,23 +1,14 @@
-import java.util.Scanner;
-
 public class Main {
-
     public static void main(String[] args) {
-
-        Scanner in = new Scanner(System.in);
-        System.out.print("Укажите сумму пополнения счета: ");
-        int topUpAccount = in.nextInt();
-        int AccountBalance = 100;
-        int x = 100;
+        int topUpAccount = 1100;
+        int accountBalance = 100;
+        int bonus = 100;
         if (topUpAccount < 1000) {
-            int balance = AccountBalance + topUpAccount;
-            System.out.printf("Баланс Вашего счета составляет: %d \n", balance);}
-        else {
-            int balance = (AccountBalance + topUpAccount) + (topUpAccount / x);
-            System.out.printf("Баланс Вашего счета составляет: %d \n", balance);
+            int finalBalance = accountBalance + topUpAccount;
+            System.out.printf("Баланс Вашего счета составляет: %d \n", finalBalance);
+        } else {
+            int finalBalance = (accountBalance + topUpAccount) + (topUpAccount / bonus);
+            System.out.printf("Баланс Вашего счета составляет: %d \n", finalBalance);
         }
-
-
-
     }
 }
